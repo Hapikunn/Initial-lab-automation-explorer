@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Robot arm + incubator">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/></filter>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#fff3e6"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="28" fill="#fff3e6"/>
+  <circle cx="690" cy="65" r="95" fill="#b56a1f" opacity="0.07"/>
+  <circle cx="90" cy="390" r="120" fill="#b56a1f" opacity="0.05"/>
+  <g><g><g transform="translate(55 65)"><rect x="0" y="0" width="335" height="270" rx="20" fill="#fff" stroke="#b56a1f" stroke-width="5"/><rect x="30" y="35" width="220" height="190" rx="12" fill="#fff8ef" stroke="#efc28d" stroke-width="3"/><path d="M48 94h185M48 148h185M48 202h185" stroke="#e8b878" stroke-width="4"/><rect x="270" y="42" width="42" height="65" rx="8" fill="#57351d"/><text x="279" y="77" font-family="Arial" font-size="16" font-weight="700" fill="#ffd8a8">37°</text></g>
+    <g stroke="#b56a1f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M505 280L445 205L492 135L555 188"/>
+      <path d="M555 188L615 145"/>
+    </g>
+    <g fill="#fff" stroke="#b56a1f" stroke-width="5">
+      <circle cx="505" cy="280" r="24"/><circle cx="445" cy="205" r="22"/><circle cx="492" cy="135" r="22"/><circle cx="555" cy="188" r="20"/>
+    </g>
+    <rect x="450" y="292" width="120" height="28" rx="12" fill="#fff" stroke="#b56a1f" stroke-width="5"/>
+    <path d="M614 145l28-18 10 16-27 20" fill="#fff" stroke="#b56a1f" stroke-width="5"/>
+    </g></g>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="34" y="32" width="148" height="38" rx="19" fill="#fff" opacity="0.92"/>
+    <circle cx="57" cy="51" r="7" fill="#b56a1f"/>
+    <text x="75" y="57" font-size="18" font-weight="700" fill="#334155">SCHEMATIC</text>
+    <text x="38" y="382" font-size="28" font-weight="800" fill="#172033">Robot arm + incubator</text>
+    <text x="38" y="415" font-size="18" fill="#64748b">Arm transports labware to conventional incubators and operates controls</text>
+  </g>
+</svg>

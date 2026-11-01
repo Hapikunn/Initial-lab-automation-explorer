@@ -24,7 +24,8 @@ function card(step, idx, mode){
   const cfg=map[mode];
   const meta=step[cfg.meta]||[];
   const imageSrc=step[cfg.img];
-  const visual=imageSrc?`<img src="${imageSrc}" alt="${step.title}" loading="lazy">`:svgArt(step.art,mode);
+  const isDiagram=imageSrc?.toLowerCase().endsWith(".svg");
+  const visual=imageSrc?`<img class="${isDiagram?'diagram':'photo'}" src="${imageSrc}" alt="${step.title}" loading="lazy">`:svgArt(step.art,mode);
   const gap=(mode==='robot' && step.robotGap)?`<div class="status-note"><span class="status-dot"></span>人手が残る工程</div>`:'';
   return `<div class="process-card ${mode}">
     <div class="visual"><span class="badge">${cfg.label}</span>${visual}</div>

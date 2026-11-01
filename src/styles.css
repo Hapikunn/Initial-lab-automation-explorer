@@ -66,3 +66,7 @@
     .empty strong{display:block;color:#333a45;font-size:17px;margin-bottom:8px}
 
     @media(max-width:900px){.app{padding:18px 14px 40px}.hero{align-items:flex-start;flex-direction:column}.legend{justify-content:flex-start}.delta{grid-template-columns:1fr 1fr}.delta-cell:nth-child(2){border-right:0}.delta-cell{border-bottom:1px solid #e5eaed}.detail-head{align-items:flex-start;flex-direction:column}.stage{min-width:180px}.paper-refs{grid-template-columns:1fr}}
+
+/* Generated machine schematics use the full 16:9 asset without photo-style cropping. */
+.visual img.diagram{object-fit:contain;background:transparent}
+.visual img.photo{object-fit:cover}

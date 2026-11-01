@@ -98,3 +98,12 @@ vercel --prod
 - Manual / Biofoundry / Robot arm の3行比較
 - Manual写真6枚を格納済み
 - Biofoundry / Robot arm画像は今後追加
+
+## Machine schematics
+
+The Biofoundry and Robot Arm rows currently use original SVG schematics stored in:
+
+- `public/images/biofoundry/`
+- `public/images/robot-arm/`
+
+They are intentionally generic diagrams rather than manufacturer product images. This makes the repository self-contained and avoids external image licensing/dependency issues. You can replace any SVG later with a photo or another diagram by changing the corresponding `bioImage` / `robotImage` path in `src/data.js`.

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Automated plate spotting">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/></filter>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf8f8"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="28" fill="#eaf8f8"/>
+  <circle cx="690" cy="65" r="95" fill="#157c83" opacity="0.07"/>
+  <circle cx="90" cy="390" r="120" fill="#157c83" opacity="0.05"/>
+  <g>
+    <g transform="translate(150 88)">
+      <rect x="0" y="20" width="500" height="230" rx="24" fill="url(#panel)" stroke="#157c83" stroke-width="5"/>
+      <path d="M240 0v105" stroke="#157c83" stroke-width="8" stroke-linecap="round"/>
+      <rect x="213" y="92" width="54" height="20" rx="9" fill="#157c83"/>
+      <path d="M224 112v54M239 112v54M254 112v54" stroke="#157c83" stroke-width="4"/>
+      <ellipse cx="138" cy="183" rx="88" ry="32" fill="#fff" stroke="#157c83" stroke-width="4"/>
+      <ellipse cx="138" cy="177" rx="79" ry="24" fill="#d9efdf" opacity="0.9"/>
+      <circle cx="111" cy="176" r="5" fill="#157c83"/><circle cx="137" cy="185" r="5" fill="#157c83"/><circle cx="167" cy="170" r="5" fill="#157c83"/>
+      <rect x="326" y="144" width="118" height="70" rx="12" fill="#fff" stroke="#b5dfe0" stroke-width="3"/>
+      <path d="M342 164h86M342 178h63" stroke="#157c83" stroke-width="4" stroke-linecap="round"/>
+    </g></g>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="34" y="32" width="148" height="38" rx="19" fill="#fff" opacity="0.92"/>
+    <circle cx="57" cy="51" r="7" fill="#157c83"/>
+    <text x="75" y="57" font-size="18" font-weight="700" fill="#334155">SCHEMATIC</text>
+    <text x="38" y="382" font-size="28" font-weight="800" fill="#172033">Automated plate spotting</text>
+    <text x="38" y="415" font-size="18" fill="#64748b">Liquid handler + plate transport place transformants on agar</text>
+  </g>
+</svg>
