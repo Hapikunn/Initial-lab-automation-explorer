@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manual, biofoundry, and robot-arm comparison for laboratory automation workflows." />
+  <title>Lab Automation Explorer — Transformation</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+<div class="app">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Lab Automation Explorer</div>
+      <h1>DNA合成からGFP活性確認までの実験を、手作業と自動化で比較する</h1>
+      <div class="subtitle">上の工程タブから実験フェーズを選択すると、下に詳細ステップを時系列で表示します。1行目は実験者が実際に行う操作、2行目はBiofoundry型、3行目は汎用ロボットアーム型です。同じTransformationを3つの実装思想で比較します。</div>
+    </div>
+    <div class="legend">
+      <div class="chip"><span class="dot manual"></span>手作業</div>
+      <div class="chip"><span class="dot bio"></span>Biofoundry型</div>
+      <div class="chip"><span class="dot robot"></span>ロボットアーム型</div>
+    </div>
+  </div>
+
+  <section class="overview-shell">
+    <div class="overview-head">
+      <div class="overview-title">実験の概要フロー</div>
+      <div class="overview-note">Transformation を実装済み</div>
+    </div>
+    <div class="overview" id="overview"></div>
+  </section>
+
+  <section class="detail" id="detail"></section>
+</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
