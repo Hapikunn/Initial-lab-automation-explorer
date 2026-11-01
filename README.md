@@ -107,3 +107,9 @@ The Biofoundry and Robot Arm rows currently use original SVG schematics stored i
 - `public/images/robot-arm/`
 
 They are intentionally generic diagrams rather than manufacturer product images. This makes the repository self-contained and avoids external image licensing/dependency issues. You can replace any SVG later with a photo or another diagram by changing the corresponding `bioImage` / `robotImage` path in `src/data.js`.
+
+
+## 用語集ポップアップ
+
+画面右上の「用語集」から、実験・自動化の主要用語を簡潔に確認できます。
+用語を追加・修正する場合は `src/main.js` の `glossaryTerms` を編集してください。

@@ -81,4 +81,73 @@ function render(stage){
       <div class="delta-cell"><div class="delta-k">このアプリで見せる価値</div><div class="delta-v"><strong>同じ生物学工程でも、責任境界が変わる</strong><br>どこまで機械が保証し、どこから人が保証するかを可視化。</div></div>
     </div>`;
 }
+const glossaryTerms = [
+  ['Transformation', '細胞へ外来DNAを導入し、そのDNAを細胞内で保持・利用できる状態にする操作。'],
+  ['Competent cell', 'DNAを取り込みやすい状態に処理した細菌細胞。Transformationに使用する。'],
+  ['Plasmid', '細菌内で複製できる小型の環状DNA。目的遺伝子を運ぶベクターとしてよく使われる。'],
+  ['E. coli', '大腸菌。分子生物学で広く使われる代表的な宿主細胞。'],
+  ['Heat shock', '細胞を低温から高温へ短時間移し、DNA取り込みを促す操作。'],
+  ['SOC medium', 'Transformation後の細胞を回復させるために使う栄養豊富な培地。'],
+  ['Recovery', 'DNA導入後の細胞を培地中で回復させ、増殖できる状態へ戻す工程。'],
+  ['Plating', '細胞懸濁液を寒天培地へ播き、コロニーを形成させる操作。'],
+  ['Selective agar', '抗生物質などを含み、目的のDNAを持つ細胞を選択的に増やす寒天培地。'],
+  ['Colony', '1個または少数の細胞から増殖してできた、目で確認できる細胞集団。'],
+  ['GFP', 'Green Fluorescent Protein。緑色蛍光を発するタンパク質で、遺伝子発現の指標として使われる。'],
+  ['Biofoundry', '複数の自動化装置を統合し、設計・構築・試験などの実験工程を標準化して実行する基盤。'],
+  ['Liquid handler', 'ピペッティングや試薬分注を自動で行う装置。'],
+  ['Cooling carrier', 'プレートやチューブを一定の低温に保つための冷却モジュール。'],
+  ['Thermal cycler', '試料温度をプログラム通りに制御する装置。PCRやHeat shock工程に利用できる。'],
+  ['Shaking incubator', '温度を保ちながら試料を振とうし、細胞を培養する装置。'],
+  ['Robot arm', '物体の搬送、装置操作、ツール交換などを行う多関節ロボット。'],
+  ['Labware', 'プレート、チューブ、チップなど、実験で使う容器や消耗品の総称。'],
+  ['Scheduler', '複数装置の実行順序や搬送タイミングを管理するソフトウェア。'],
+  ['Throughput', '一定時間内に処理できる試料数や実験数。自動化性能を表す指標の一つ。']
+];
+
+function setupGlossary(){
+  const modal = document.createElement('div');
+  modal.id = 'glossaryModal';
+  modal.className = 'glossary-modal';
+  modal.setAttribute('role','dialog');
+  modal.setAttribute('aria-modal','true');
+  modal.setAttribute('aria-labelledby','glossaryTitle');
+  modal.setAttribute('aria-hidden','true');
+  modal.innerHTML = `
+    <div class="glossary-backdrop" data-glossary-close></div>
+    <div class="glossary-panel">
+      <div class="glossary-head">
+        <div>
+          <div class="glossary-kicker">Glossary</div>
+          <h2 id="glossaryTitle">用語集</h2>
+          <p>実験自動化に馴染みがない人向けの簡潔な説明です。</p>
+        </div>
+        <button class="glossary-close" type="button" aria-label="用語集を閉じる" data-glossary-close>×</button>
+      </div>
+      <div class="glossary-list">
+        ${glossaryTerms.map(([term,desc])=>`<div class="glossary-item"><div class="glossary-term">${term}</div><div class="glossary-desc">${desc}</div></div>`).join('')}
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const openButton = document.getElementById('glossaryButton');
+  const closeButtons = modal.querySelectorAll('[data-glossary-close]');
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    openButton?.focus();
+  };
+  const open = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    modal.querySelector('.glossary-close')?.focus();
+  };
+  openButton?.addEventListener('click',open);
+  closeButtons.forEach(el=>el.addEventListener('click',close));
+  document.addEventListener('keydown',(event)=>{ if(event.key==='Escape' && modal.classList.contains('open')) close(); });
+}
+
+setupGlossary();
+
 render('transformation');
